@@ -1,0 +1,237 @@
+/* fonts */
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/hk-grotesk.min.css");
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/anonymous-pro.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+    --background-color: #000000;
+    --background-color2: #ffffff;
+    --transparency-color: #191414;
+    --text-color: #ffffff;
+    --text-color2: #353535;
+    --font-HKG: "HK Grotesk";
+    --font-ANYPRO: "Anonymous Pro";
+    --font-RDH: "Rajdhani";
+    --font-EXO2: "Exo 2";
+    --font-dongle: "Dongle";
+    --font-montserrat: "Montserrat";
+    --font-encodesans: "Encode Sans";
+    --ratio: 2.5;
+}
+
+/* styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    image-rendering: crisp-edges;
+}
+
+hr {
+    margin: 0 2% 1% 0;
+}
+
+p {
+    overflow: hidden;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--background-color);
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    left: 2%;
+    top: 1%;
+    font-size: calc(32px + 1.2vw);
+    font-family: var(--font-dongle);
+    margin-top: -1px;
+}
+
+.logo * {
+    text-decoration: none;
+    color: white;
+}
+
+.menu-bar ul {
+    position: absolute;
+    list-style: none;
+    color: var(--text-color);
+    font-family: var(--font-RDH);
+    font-size: 100%;
+    top: 2%;
+    right: 2%;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.menu-bar ul * {
+    /* asterisk for applying property to
+    li + <a> both. */
+
+    margin: 1% 0.3vw;
+    display: inline;
+
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s 30ms;
+}
+
+.menu-bar ul li *:hover {
+    cursor: pointer;
+    color: yellow;
+}
+
+.mid-sec {
+    margin: 100px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+}
+
+.mid-sec * {
+    color: var(--text-color);
+    text-align: center;
+    font-family: var(--font-dongle);
+    vertical-align: middle;
+    font-size: 180%;
+}
+
+.mid-sec img {
+    width: 22%;
+    height: auto;
+    min-width: 125px;
+}
+
+.intro-thing {
+    margin-top: calc(100px + 20vh);
+    text-align: center;
+    color: var(--text-color);
+    font-family: var(--font-dongle);
+    font-size: calc(36px + 1.2vw);
+    text-shadow: 2px 2px var(--transparency-color);
+}
+
+.searchEp {
+    color: white;
+    background-color: black;
+    border: none;
+    margin: 0.5rem;
+    font-size: calc(16px + 1vw);
+    font-family: var(--font-dongle);
+    transition: all 0.25s 10ms;
+    width: 20rem;
+}
+
+.s-icon {
+    font-size: calc(14px + 1.2vw);
+    border: solid #ffffff00 2px;
+    border-radius: 50%;
+    padding: 0.5%;
+}
+
+.inner {
+    border: solid rgba(255, 255, 255, 0) 2px;
+    border-radius: 100rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    transition: all 0.2s;
+}
+
+.inner_2 {
+    border: solid white 2px;
+}
+
+.searchEp:focus {
+    outline: none;
+}
+
+.podcast-sec {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 50px auto 5%;
+    width: calc(85% - 1%);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    overflow: hidden;
+    width: calc(16rem * var(--ratio));
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: all 0.2s 30ms;
+    /* flex is VERY necessary
+    for fitting these images into
+    the div */
+}
+
+.card img {
+    overflow: none;
+    -o-object-fit: cover;
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transition: all 0.5s;
+}
+
+.card .fa-play-circle {
+    position: absolute;
+    margin: 0 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: calc(36px + 1.2vw);
+    color: white;
+}
+
+.text-con {
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    padding: 5%;
+    background-color: #00000071;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.2s;
+    width: 90%;
+    text-align: center;
+    /* add in the animation for the title */
+}
+
+.links {
+    font-family: var(--font-dongle);
+    text-shadow: 2px 2px 5px #020202;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: calc(12px + 1.8vmin);
+    line-height: calc(7px + 1.8vmin);
+}
