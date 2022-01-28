@@ -9,11 +9,11 @@ searchInput.addEventListener("keydown", function (e) {
     if (e.code === "Enter") {
         //checks whether the pressed key is "Enter"
         let cards = document.getElementsByClassName("card");
-        filter(searchInput.value.toLowerCase(), cards);
+        searchFilter(searchInput.value.toLowerCase(), cards);
     }
 });
 
-function filter(val, array) {
+function searchFilter(val, array) {
     console.log(val);
     if (val.length > 0) {
         for (i = 0; i < array.length; i++) {
@@ -49,8 +49,7 @@ setInterval(function () {
 
             let div = card[i].getElementsByClassName('text-con');
             div[0].style.zIndex = 100;
-        }
-        else {
+        } else {
             let img = card[i].getElementsByTagName('img');
             img[0].style.filter = "";
 
