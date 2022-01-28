@@ -20,10 +20,14 @@
     --font-dongle: "Dongle";
     --font-montserrat: "Montserrat";
     --font-encodesans: "Encode Sans";
-    --ratio: 2.5;
+    --ratio: 2.3;
 }
 
 /* styling */
+
+::selection {
+    background: #61a8ff77;
+}
 
 * {
     margin: 0;
@@ -51,10 +55,8 @@ p {
 .logo {
     position: absolute;
     left: 2%;
-    top: 1%;
     font-size: calc(32px + 1.2vw);
     font-family: var(--font-dongle);
-    margin-top: -1px;
 }
 
 .logo * {
@@ -132,7 +134,7 @@ p {
     font-size: calc(16px + 1vw);
     font-family: var(--font-dongle);
     transition: all 0.25s 10ms;
-    width: 20rem;
+    width: 30ch;
 }
 
 .s-icon {
@@ -140,6 +142,7 @@ p {
     border: solid #ffffff00 2px;
     border-radius: 50%;
     padding: 0.5%;
+    transition: all 0.2s;
 }
 
 .inner {
@@ -150,7 +153,7 @@ p {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    padding-left: 1rem;
+    padding: 0 1rem;
     transition: all 0.2s;
 }
 
